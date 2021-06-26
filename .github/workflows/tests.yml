@@ -69,7 +69,7 @@ jobs:
         with:
           path: ${{github.workspace}}/.venv
           key: ${{ matrix.os }}-${{ hashFiles('**/poetry.lock') }}
-          restore-keys: ${{ matrix.os }}-
+          restore-keys: ${{ matrix.os }}-${{ matrix.python-version }}
 
       # Installs the python deps using poetry if the poetry.lock file changed.
       - name: Install deps
