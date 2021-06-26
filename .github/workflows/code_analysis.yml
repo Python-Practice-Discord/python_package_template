@@ -6,21 +6,76 @@ on:
 
 jobs:
   code_analysis:
-    runs-on: ubuntu-latest
+    name: Code Analysis
+
+    strategy:
+      matrix:
+        os:
+          - 'ubuntu-latest'
+        python-version:
+          - '3.9'
+    runs-on: ${{ matrix.os }}
+
     steps:
-      - uses: actions/checkout@v2
+      ##################### START Standard Setup for Poetry #####################
+      - name: Checkout code
+        uses: actions/checkout@v2.3.4
 
-      - name: Build the Docker image
-        run: docker build -t local:latest .
+      - name: Sets up the specified python version
+        uses: actions/setup-python@v2.2.2
+        with:
+          python-version: ${{matrix.python-version}}
 
-      - name: Run isort in Docker
-        run: docker run -t local:latest "isort --check tests/ src/"
+      # Creates a cache for poetry if it does not already exist
+      - name: Cache Poetry
+        id: cache-poetry
+        uses: actions/cache@v2.1.6
+        with:
+          path: ~/.poetry
+          key: ${{ matrix.os }}-poetry
 
-      - name: Run black in Docker
-        run: docker run -t local:latest "black --check tests/ src/"
+      # Installs poetry IF the cache-poetry does not hit.
+      - name: Install latest version of Poetry
+        if: steps.cache-poetry.outputs.cache-hit != 'true'
+        run: |
+          curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py |
+          python -
 
-      - name: Run flake8 in Docker
-        run: docker run -t local:latest "flake8 tests/ src/"
+      # Adds poetry to the path so it can be accessed
+      - name: Add Poetry to $PATH
+        run: |
+          echo "$HOME/.poetry/bin" >> $GITHUB_PATH
 
-      - name: Run mypy in Docker
-        run: docker run -t local:latest "mypy tests/ src/"
+      # Checks to see if the pyproject.toml file is valid
+      - name: Check pyproject.toml validity
+        run: poetry check -n
+
+      # Caches the poetry virtual env in the .venv folder based on the os that is being used and
+      #   the hash of the poetry.lock file.
+      - name: Cache dependencies
+        id: cache-deps
+        uses: actions/cache@v2.1.6
+        with:
+          path: ${{github.workspace}}/.venv
+          key: ${{ matrix.os }}-${{ hashFiles('**/poetry.lock') }}
+          restore-keys: ${{ matrix.os }}-
+
+      # Installs the python deps using poetry if the poetry.lock file changed.
+      - name: Install deps
+        if: steps.cache-deps.cache-hit != 'true'
+        run: poetry install -n --remove-untracked
+
+      ##################### END Standard Setup for Poetry #####################
+
+
+      - name: Run isort
+        run: poetry run "isort --check tests/ src/"
+
+      - name: Run black
+        run: poetry run "black --check tests/ src/"
+
+      - name: Run flake8
+        run: poetry run "flake8 tests/ src/"
+
+      - name: Run mypy
+        run: poetry run "mypy tests/ src/"
