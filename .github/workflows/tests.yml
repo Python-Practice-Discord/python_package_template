@@ -72,7 +72,7 @@ jobs:
 
       # Installs the python deps using poetry if the poetry.lock file changed.
       - name: Install deps
-        if: steps.cache-deps.cache-hit != 'true'
+        if: steps.cache-deps.outputs.cache-hit != 'true'
         run: poetry install -n --remove-untracked
 
       ##################### END Standard Setup for Poetry #####################
