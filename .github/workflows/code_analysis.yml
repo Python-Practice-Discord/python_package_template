@@ -57,8 +57,7 @@ jobs:
         uses: actions/cache@v2.1.6
         with:
           path: ${{github.workspace}}/.venv
-          key: ${{ matrix.os }}-${{ hashFiles('**/poetry.lock') }}
-          restore-keys: ${{ matrix.os }}-
+          key: ${{ matrix.os }}-${{ matrix.python-version }}-${{ hashFiles('**/poetry.lock') }}
 
       # Installs the python deps using poetry if the poetry.lock file changed.
       - name: Install deps
