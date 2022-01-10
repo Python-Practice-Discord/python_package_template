@@ -1,4 +1,4 @@
-### [Readme](../README.md)
+### [Readme](README.md)
 
 # Docs for Project Contributors
 
@@ -12,9 +12,11 @@
 
 ### [Tickets](TICKETS.md)
 
+### [Files - Explained](FILES_EXPLAINED.md)
+
 # General Information
 
-### [Code of Conduct](../CODE_OF_CONDUCT.md)
+### [Code of Conduct](CODE_OF_CONDUCT.md)
 
 ### [Authors](../AUTHORS.rst)
 
