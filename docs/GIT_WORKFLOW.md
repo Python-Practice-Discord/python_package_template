@@ -1,6 +1,4 @@
-# Best Practices
-
-## Git
+# Git Workflow
 
 This project uses [GitHub Flow](https://guides.github.com/introduction/flow/) and follows a couple
 of simple principles:
@@ -9,6 +7,10 @@ of simple principles:
 * All code going into `main` must go through a pull request.
 * All pull requests must pass GitHub Action checks and have multiple reviewers.
 * To deploy code into environments other than production git tags are used. IE: `STAGING`, `BETA`
+
+Most of this workflow will be managed by the Team Lead, but it's helpful to be familiar with it
+as much as you can. If you're feeling overwhelmed, just look at the parts on Commit Messages, Feature
+and Bugfix Branches, and Merging. Feel free to ask any questions you have in Discord.
 
 ### Commit messages
 
@@ -68,35 +70,3 @@ follows: `hotfix/<github ticket_number>_<short_description>` IE: `hotfix/#1_stop
 ### Merging
 
 All merging must be done via a pull request. All pull requests must pass the GitHub actions.
-
-All merges to `main` must have been deployed to staging and tested. Except for hotfix branches.
-
-## Editors
-
-This project provides a .editorconfig file that tells your editor how to treat some files. This
-includes 4 spaces per tab in python files, no whitespace at the end of lines, and using lf as the
-new line character.
-
-Pycharm and VSCode are the officially supported editors, but almost any editor will work. Including
-vim.
-
-## Linters and formatters.
-
-This project uses the [isort](https://pycqa.github.io/isort/)
-, [black formatter](https://black.readthedocs.io/en/stable/),
-and [Flake8](https://flake8.pycqa.org/en/latest/) to ensure everyone's code follows the same
-standards and best practices. The code standards are enforced on commit time via pre-commit, and
-during pull requests via GitHub actions.
-
-These tools can be run outside of commit by running `make check` in your terminal. NOTE: Running
-this can change your files.
-
-Black will automatically reformat your files, and isort will reorder your imports. This will never
-break your code, just change how it looks.
-
-Flake8 will check some python best practices and throw error messages if you have any.
-
-## Static analysis
-
-[Mypy](http://mypy-lang.org/) runs a some static analysis on python types to help avoid some common
-errors. Mypy can be run using `make check` or on its own `mypy tests/ src/`.

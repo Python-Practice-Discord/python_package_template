@@ -4,24 +4,22 @@
 
 ### [Contribution guidelines for this project](CONTRIBUTING.md)
 
-### [Getting started developing this project](GETTING_STARTED_DEVELOPING.md)
+### [Setting up your dev environment and editor](DEV_ENVIRONMENT.md)
 
-### [Development best practices](DEVELOPMENT_BEST_PRACTICES.md)
+### [Git workflow](GIT_WORKFLOW.md)
 
-### [Writing docs](DOCUMENTATION.md)
+### [Writing documentation](DOCUMENTATION.md)
 
-### [Tickets](TICKETS.md)
+### [Managing tickets](TICKETS.md)
 
-### [Files - Explained](FILES_EXPLAINED.md)
+### [Files Explained](FILES_EXPLAINED.md)
 
 # General Information
 
 ### [Code of Conduct](CODE_OF_CONDUCT.md)
 
-### [Authors](../AUTHORS.rst)
-
 ### [Changelog](../CHANGELOG.rst)
 
 ### [License](../LICENSE)
 
-### [Team](TEAM.md)
+### [Team Information](TEAM.md)
