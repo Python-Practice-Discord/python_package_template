@@ -27,6 +27,7 @@ directory.
        * The Project Team should have `Write` permissions
 * Add project description in README.md
 * Add usage instructions in README.md
+* Add the core team and Team Lead information to `/docs/TEAM.md`
 * Remove this line and everything above it.
 
 # Project Name
