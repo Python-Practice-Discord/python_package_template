@@ -8,9 +8,13 @@
 
 ### [Setting up your dev environment and editor](DEV_ENVIRONMENT.md)
 
+### [Using Poetry for dependency management](USING_POETRY.md)
+
 ### [Git workflow](GIT_WORKFLOW.md)
 
 ### [Writing documentation](DOCUMENTATION.md)
+
+### [Writing tests](WRITING_TESTS.md)
 
 ### [Managing tickets](TICKETS.md)
 
