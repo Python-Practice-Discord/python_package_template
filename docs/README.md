@@ -1,12 +1,16 @@
 # About This Template
 This is the Python Package template for all projects developed and maintained by the Python Practice Discord
 community. Our templates are maintained by the [Template Team](https://github.com/orgs/Python-Practice-Discord/teams/template-team), 
-which is lead by Team Lead Morpheus636.
+which is managed by Team Lead Morpheus636.
 
 Special thanks to the following outside contributors and former team members for their work on these templates:
 - PeterHoburg, Former Team Lead
 
 ## Using this template
+
+(If you're just looking at this template, you can safely ignore everything above the line that says
+"Remove this line and everything above it" - this is for the team lead to setup and it only needs to happen once
+per project.)
 
 The projects' name should be `lower_snake_case`. This should be the same name as the projects' root
 directory.
@@ -46,3 +50,7 @@ Add usage and/or installation instructions here, as stated in "Using this Templa
 To view all the available documentation for this project please see
 our [Documents Index](INDEX.md). This includes how to get started, our coding best practices,
 an explanation of all the files in this repo, and more.
+
+If you're just feeling a bit overwhelmed at the number of files in this repo, or you don't
+understand what anything does, read [this document](/docs/FILES_EXPLAINED.md) and it should
+clear it all up for you. If not, ask some questions over on discord.

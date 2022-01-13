@@ -2,6 +2,8 @@
 
 # Docs for Project Contributors
 
+### [Files Explained](FILES_EXPLAINED.md)
+
 ### [Contribution guidelines for this project](CONTRIBUTING.md)
 
 ### [Setting up your dev environment and editor](DEV_ENVIRONMENT.md)
@@ -11,8 +13,6 @@
 ### [Writing documentation](DOCUMENTATION.md)
 
 ### [Managing tickets](TICKETS.md)
-
-### [Files Explained](FILES_EXPLAINED.md)
 
 # General Information
 

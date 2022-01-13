@@ -24,9 +24,9 @@ vim.
 
 ### Linters and formatters.
 
-This project uses the [isort](https://pycqa.github.io/isort/)
-, [black formatter](https://black.readthedocs.io/en/stable/),
-and [Flake8](https://flake8.pycqa.org/en/latest/) to ensure everyone's code follows the same
+This project uses the [isort import sorter](https://pycqa.github.io/isort/)
+, [Black code formatter](https://black.readthedocs.io/en/stable/),
+and [Flake8 linter](https://flake8.pycqa.org/en/latest/) to ensure everyone's code follows the same
 standards and best practices. The code standards are enforced on commit time via pre-commit, and
 during pull requests via GitHub actions.
 
