@@ -15,7 +15,7 @@ testpaths = [
 ]
 
 [tool.isort]
-profile = black
+profile = "black"
 multi_line_output = 3
 line_length = 100
 include_trailing_comma = True
@@ -24,7 +24,7 @@ use_parentheses=True
 combine_as_imports = True
 force_alphabetical_sort_within_sections = True
 ensure_newline_before_comments = True
-sections = FUTURE,STDLIB,THIRDPARTY,FIRSTPARTY,LOCALFOLDER
+sections = ["FUTURE", "STDLIB", "THIRDPARTY", "FIRSTPARTY" ,"LOCALFOLDER"]
 
 [tool.poetry]
 name = "project-template"
