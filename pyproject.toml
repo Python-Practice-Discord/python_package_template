@@ -14,6 +14,18 @@ testpaths = [
     "tests",
 ]
 
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+line_length = 100
+include_trailing_comma = true
+force_grid_wrap=0
+use_parentheses=true
+combine_as_imports = true
+force_alphabetical_sort_within_sections = true
+ensure_newline_before_comments = true
+sections = ["FUTURE", "STDLIB", "THIRDPARTY", "FIRSTPARTY" ,"LOCALFOLDER"]
+
 [tool.poetry]
 name = "project-template"
 version = "0.1.0"

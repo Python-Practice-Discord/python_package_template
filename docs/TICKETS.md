@@ -70,7 +70,7 @@ so that you don't waste your time with a duplicate pull request.
 ### Outside Contributors
 If a ticket is marked as `help wanted` or `good first issue`, and you'd like to pick up the ticket to
 work on implementing it, post a comment in the ticket saying that you'll be working on it. When a
-Core Team member sees it, they will mark it as assigned to you.
+Core Team member or the Team Lead sees it, they will mark it as assigned to you.
 
 Make sure that nobody has asked to be assigned or already been assigned before you begin working,
 to prevent multiple people opening a pull request over the same thing.
@@ -81,5 +81,5 @@ The criteria for ticket closure is as follows:
 - The bugfix, feature, or documentation improvement requested will not be implemented, and the
   ticket has been labeled as `wontfix` by the Team Lead.
 - The bugfix, feature, or documentation improvement requested has been implemented, and a
-  pull request has been accepted and merged.
+  pull request meeting all the closing criteria listed in the ticket has been accepted and merged.
 - The question(s) asked have been answered.

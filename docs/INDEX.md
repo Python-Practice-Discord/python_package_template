@@ -1,25 +1,29 @@
-### [Readme](../README.md)
+### [Readme](README.md)
 
 # Docs for Project Contributors
 
+### [Files Explained](FILES_EXPLAINED.md)
+
 ### [Contribution guidelines for this project](CONTRIBUTING.md)
 
-### [Getting started developing this project](GETTING_STARTED_DEVELOPING.md)
+### [Setting up your dev environment and editor](DEV_ENVIRONMENT.md)
 
-### [Development best practices](DEVELOPMENT_BEST_PRACTICES.md)
+### [Using Poetry for dependency management](USING_POETRY.md)
 
-### [Writing docs](DOCUMENTATION.md)
+### [Git workflow](GIT_WORKFLOW.md)
 
-### [Tickets](TICKETS.md)
+### [Writing documentation](DOCUMENTATION.md)
+
+### [Writing tests](WRITING_TESTS.md)
+
+### [Managing tickets](TICKETS.md)
 
 # General Information
 
-### [Code of Conduct](../CODE_OF_CONDUCT.md)
-
-### [Authors](../AUTHORS.rst)
+### [Code of Conduct](CODE_OF_CONDUCT.md)
 
 ### [Changelog](../CHANGELOG.rst)
 
 ### [License](../LICENSE)
 
-### [Team](TEAM.md)
+### [Team Information](TEAM.md)
